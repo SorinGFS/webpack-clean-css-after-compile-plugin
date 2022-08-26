@@ -1,4 +1,4 @@
-﻿### Clean CSS After Compile Plugin
+﻿### Webpack Clean CSS After Compile Plugin
 
 For some reason `webpack.optimization` with [CssMinimizerPlugin.cleanCssMinify](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/#function) does not work as expected. This plugin aims to solve the same thing but after compilation is done. The `css` assets are modified in place without altering the references already set by `webpack`.
 

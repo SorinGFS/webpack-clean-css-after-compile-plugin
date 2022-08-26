@@ -1,0 +1,20 @@
+{
+  "name": "webpack-clean-css-after-compile-plugin",
+  "version": "1.0.0",
+  "description": "Webpack Plugin for clean-css minification after compilation.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SorinGFS/webpack-clean-css-after-compile-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "clean-css",
+    "plugin"
+  ],
+  "author": "SorinGFS",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css": "^5.3.1"
+  }
+}

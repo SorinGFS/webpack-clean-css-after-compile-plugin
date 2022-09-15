@@ -1,6 +1,6 @@
 {
   "name": "webpack-clean-css-after-compile-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack Plugin for clean-css minification after compilation.",
   "main": "index.js",
   "repository": {

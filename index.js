@@ -34,18 +34,20 @@ class CleanCssAfterCompilePlugin {
                         assets.forEach((asset) => {
                             if (/\.css$/.test(asset.name)) {
                                 const assetPath = path.resolve(this.outputDir, asset.name);
+                                process.stdout.write(`[CleanCssAfterCompilePlugin] minifying ${assetPath}...`);
                                 const output = new CleanCSS(this.cleanCssOptions).minify([assetPath]);
                                 if (!output.errors.length) {
                                     fs.writeFile(assetPath, output.styles, 'utf8', function (err) {
                                         if (err) return console.log(err);
                                     });
-                                    console.log('[CleanCssAfterCompilePlugin] minifying compilation css assets done!');
+                                    console.log(`[CleanCssAfterCompilePlugin] minifying ${assetPath} done!`);
                                 } else {
                                     console.log(output.errors);
                                 }
                             }
                         });
                     }
+                    console.log('[CleanCssAfterCompilePlugin] minifying compilation css assets done!');
                 } else {
                     throw new ReferenceError(`[CleanCssAfterCompilePlugin] invalid outputDir: ${this.outputDir}`);
                 }
